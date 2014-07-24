@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.baidu.houfeng</groupId>
+    <artifactId>houfeng-parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>The parent project for houfeng communication platform</name>
+    <description>Define the common repositories</description>
+
+    <modules>
+        <module>server</module>
+        <module>client</module>
+        <module>api</module>
+        <module>tools</module>
+    </modules>
+
+    <properties>
+        <hopper.version>0.1-SNAPSHOT</hopper.version>
+        <SOURCE_VERSION>1.8</SOURCE_VERSION>
+        <TARGET_VERSION>1.8</TARGET_VERSION>
+        <encoding>UTF-8</encoding>
+        <junit.version>4.8.1</junit.version>
+        <slf4j.api.version>1.6.1</slf4j.api.version>
+        <logback.version>1.0.6</logback.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- logger -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-ext</artifactId>
+                <version>${slf4j.api.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <!-- test -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
